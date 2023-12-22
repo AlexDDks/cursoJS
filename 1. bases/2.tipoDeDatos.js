@@ -1,4 +1,9 @@
 // // -----TIPOS DE DATOS-----
+
+// La importancia de los timpos de datos recae en que los programas puedan resolver satisfactoriamente casos como:
+// let x = 16 + "Volvo";
+// Esto no tiene sentido, sin embargo JS trataría al número como string
+
 // // 1. PRIMITIVOS: Los tipos primitivos son fundamentales para las operaciones básicas y la lógica, mientras que los tipos no primitivos son esenciales para construir estructuras más complejas y manejar colecciones de datos.
 
 // // 1.1 Undefined: Indica que una variable ha sido declarada pero no se le ha asignado un valor, al igual que una función sin return.
@@ -54,7 +59,7 @@
 
 
 // // ----------------------------------------
-// // 1. 4 Number: Es el tipo de dato para representar tanto enteros como números de punto flotante. JavaScript utiliza una sola estructura de número de punto flotante para todos los valores numéricos, basada en el estándar IEEE 754.
+// // 1. 4 Number: Es el tipo de dato para representar tanto enteros como números de punto flotante. JavaScript utiliza una sola estructura de número de punto flotante (64-bits) para todos los valores numéricos, basada en el estándar IEEE 754, es decir que todos los números son guardados como número decimales
 
 // // IMPORTANCIA:
 // // - Esencial para realizar cálculos y operaciones matemáticas.
@@ -63,6 +68,7 @@
 // let entero = 42;
 // let decimal = 3.14;
 // let negativo = -123;
+// let exponencial = 123e5;  
 // let notANumber = NaN; // Especial valor Number que indica No-es-un-Número
 
 
@@ -76,6 +82,8 @@
 // // let textoSimple = 'Hola';
 // // let textoDoble = "Mundo";
 // // let plantillaLiteral = `Hola Mundo`;
+// // let text = "We are the so-called "Vikings" from the north."; //The string will be chopped to "We are the so-called ".The solution to avoid this problem, is to use the backslash escape character. The backslash (\) escape character turns special characters into string characters: "We are the so-called \"Vikings\" from the north."
+
 
 // // -----------------------------------------
 // // 1.6 Symbol: es un tipo de dato primitivo que se utiliza para crear identificadores únicos. Los Symbols son siempre únicos, incluso si tienen la misma descripción.
@@ -96,9 +104,9 @@
 // // El valor máximo que puede manejar el tipo Number de forma segura es 9007199254740991, conocido también como Number.MAX_SAFE_INTEGER. Más allá de este límite, los números pueden perder precisión debido a cómo JavaScript maneja los números de punto flotante bajo el estándar IEEE 754
 // // Sintaxis:
 
-let numeroGrande = BigInt(valor);
-// O también añadiendo n al final de un número entero literal:
-let otroNumeroGrande = 123456789012345678901234567890n;
+// let numeroGrande = BigInt(valor);
+// // O también añadiendo n al final de un número entero literal:
+// let otroNumeroGrande = 123456789012345678901234567890n;
 
 // // IMPORTANCIA:
 // // Importancia: BigInt es crucial para realizar operaciones matemáticas precisas con números extremadamente grandes, donde Number no puede manejarlos correctamente debido a las limitaciones de precisión de punto flotante.
